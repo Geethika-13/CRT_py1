@@ -1,4 +1,4 @@
-for i in range(5):
+1.for i in range(5):
   print("*",end = " ")
 print() #cursor move to next line
 for i in range(5):
@@ -6,7 +6,7 @@ for i in range(5):
 for i in range(5):
   print("*",end = " ")
 
-num = int(input("Enter a number:"))
+2.num = int(input("Enter a number:"))
 if num % 2 == 0:
   for i in range(1,11):
     print(i,"*",num,"=",i*num)
@@ -14,14 +14,14 @@ else:
   for i in range(1,num+1):
     print(i,"*",num,"=",i*num)
 
-s = input("Enter any sentence:")
+3.s = input("Enter any sentence:")
 count = 0
 for i in range(len(s)):
   if (s[i] == " " and s[i+1]!= " "): 
     count+=1
 print("The total words:",count+1)
 
-import random
+4.import random
 p1 = input("Enter the name:")
 p2 = input("Enter the name:")
 s1 = 10
