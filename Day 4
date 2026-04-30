@@ -1,0 +1,71 @@
+1.
+a= [chr(i) for i in range(65,91) if chr(i) not in "AEIOU"] #using ascii values
+print(a)
+
+2.
+a = 6748
+b = [ int(i) for i in str(a)] #convert int->str->int
+print(b)
+print(max(b))
+  
+3.
+names = ['ram','zai','rose','jack','rang']
+marks = [35,90,56,37,88]
+pos = 1
+for i in range(5):
+  if marks[i]>40:
+    #print(names[i],"has scored",marks[i],"%")
+    print("{}.{} has scored {}%".format(pos,names[i],marks[i]))
+    pos = pos+1  
+
+  4.
+  names = ['raM','zaI','rOse','jack','rang']
+marks = [[30,40,50],[21,67,43],[34,56,23],[67,23,54],[21,87,54]]
+pos = 1
+for i in range(5):
+  name = names[i].capitalize()
+  av_g = sum(marks[i])/len(marks[i])
+  if av_g >= 80:
+    grade = "A"
+  elif av_g >= 70:
+    grade = "B"
+  elif av_g >= 60:
+    grade = "c"
+  else:
+    grade = "D"
+    av_g = round(av_g,2)
+  print(pos,".","Mr.",name,"has scored",av_g,"%","-",grade,"Grade")
+  #print("{}.{} has scored {}% - {}". format(pos,name,av_g,grade))
+  pos = pos+1
+
+
+  5.
+  names = ['ram','zai','rose','jack','rang']
+age = [20,22,18,24,30]
+res= list(zip(age,names)) # to map both list-> convert to tuple
+res1 = sorted(res)
+pos = 1
+for i in res1:
+  print("Rank",pos,":", i[1],"age is",i[0])
+  #print("Rank {}: {} age is {}".format(pos,i[1],i[0])) (format is method of string)
+  pos = pos+1
+
+  6.
+  import random  #looping in nesting
+a = int(input("Enter num of teams"))
+teams = []
+print("Enter team names:")
+for i in range(a):
+   t = input("Enter team name:")
+   teams.append(t)
+m = int(input("Enter of match between teams:"))
+matches = []
+for i in range(0,a-1):
+  for j in range(1,a):
+    for k in range(m):
+      matches.append((teams[i],teams[j]))
+random.shuffle(matches)
+pos = 1
+for i in matches:
+  print("Match",pos,":",i[0],i[1])
+  pos = pos+1
